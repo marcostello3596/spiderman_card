@@ -1,0 +1,54 @@
+.app-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Cambiamos a dirección vertical para centrar el texto */
+  align-items: center; /* Centramos el contenido horizontalmente */
+}
+
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.canvas-container canvas {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000; /* Borde opcional para el canvas */
+}
+
+.text-container {
+  flex: 1; /* El texto tomará el espacio restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Centramos el contenido verticalmente arriba */
+  align-items: center; /* Centramos el contenido horizontalmente */
+  padding: 20px;
+  width: 100%; /* El texto ocupará todo el ancho en dispositivos móviles */
+}
+
+@media (max-width: 767px) {
+  /* Estilos para pantallas más pequeñas */
+  .canvas-container {
+    width: 100%; /* O ajusta el ancho según tus necesidades */
+  }
+  .text-container {
+    width: 100%;
+  }
+}
+
+.bg {
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+
+.text-2 {
+  z-index: 2
+}
